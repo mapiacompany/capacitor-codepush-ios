@@ -1,0 +1,39 @@
+{
+  "name": "capacitor-codepush-ios",
+  "version": "1.0.0",
+  "description": "CodePush iOS Plugin for Capacitor",
+  "module": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "repository": "github:mapiacompany/capacitor-codepush-ios",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "scripts": {
+    "lint": "npm run prettier -- --check && npm run swiftlint -- lint",
+    "prettier": "prettier \"**/*.{css,html,ts,js,java}\"",
+    "swiftlint": "node-swiftlint",
+    "build": "npm run clean && tsc && rollup -c rollup.config.js",
+    "clean": "rimraf ./dist",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "capacitor",
+    "code",
+    "push",
+    "ecosystem:capacitor",
+    "capacitor-ios"
+  ],
+  "author": "MAPIACOMPANY",
+  "license": "MIT",
+  "devDependencies": {
+  },
+  "dependencies": {
+  },
+  "cordova": {
+    "id": "capacitor-codepush-ios",
+    "platforms": [
+      "ios"
+    ]
+  }
+}
